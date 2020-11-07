@@ -1,11 +1,17 @@
 import vlc
+from threading import Thread 
 #pip install python-vlc ---- biblioteca para manejo de sonido
 #si usan python 32 bit deben instalar vlc 32 bit, lo mismo para 64 bit
 current_ost=vlc.MediaPlayer()
 
-def reproducir_ost(archivoMP3):
-    reproductor = vlc.MediaPlayer(archivoMP3))
+def reproducir_fx(archivoMP3):
+    reproductor = vlc.MediaPlayer(archivoMP3)
     Thread(target = reproductor.play, args=()).start()
+
+def reproducir_ost(archivoMP3):
+    reproductor = vlc.MediaPlayer(archivoMP3)
+    Thread(target = reproductor.play, args=()).start()
+    detener_ost()
     setCurrent_ost(reproductor)
     
 def detener_ost():
@@ -16,4 +22,3 @@ def detener_ost():
 def setCurrent_ost(reproductor):
     global current_ost
     current_ost= reproductor
-
