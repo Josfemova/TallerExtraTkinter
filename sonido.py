@@ -10,7 +10,7 @@ Canv.place(x=0,y=0)
 btn_play = Button(Canv, text = "play", font=("Arial", 24), command=lambda:ost.reproducir_ost("./sample.mp3"))
 btn_play.place(x=20, y=20)
 
-btn_stop = Button(Canv, text = "stop", font=("Arial", 24), command=lambda:ost.detener_ost("./sample.mp3"))
+btn_stop = Button(Canv, text = "stop", font=("Arial", 24), command=lambda:ost.detener_ost())
 btn_stop.place(x=120, y=20)
 
 btn_fx = Button(Canv, text = "fx", font=("Arial", 24), command=lambda:ost.reproducir_fx("./fx.mp3"))
