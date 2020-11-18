@@ -16,4 +16,10 @@ btn_stop.place(x=120, y=20)
 btn_fx = Button(Canv, text = "fx", font=("Arial", 24), command=lambda:ost.reproducir_fx("./fx.mp3"))
 btn_fx.place(x=300, y=20)
 
+
+
+
+
+
+
 root.mainloop()
